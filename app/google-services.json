@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "271766682776",
+    "firebase_url": "https://projetinho-fb630.firebaseio.com",
+    "project_id": "projetinho-fb630",
+    "storage_bucket": "projetinho-fb630.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271766682776:android:a92fec4c7bbf86dd",
+        "android_client_info": {
+          "package_name": "com.example.user.projetinho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271766682776-8fntolf64vdthqentpiek85aseg8vbgp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.projetinho",
+            "certificate_hash": "715bf7934dd5912c5dd96decb5aab5a7de1d90dd"
+          }
+        },
+        {
+          "client_id": "271766682776-73qesuvt199nrmh8p23i0obheeio1738.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN3dtF0F66PE1T-NYakXcclfFKFFP9LTU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271766682776-73qesuvt199nrmh8p23i0obheeio1738.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
