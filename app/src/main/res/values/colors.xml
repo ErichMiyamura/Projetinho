@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#0ce0e4</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorCircle">#A7DEFC</color>
+    <color name="colorButton">#00A6FF</color>
+    <color name="Divider">#787878</color>
 </resources>

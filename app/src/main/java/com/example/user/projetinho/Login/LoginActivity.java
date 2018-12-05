@@ -1,4 +1,4 @@
-package com.example.user.projetinho;
+package com.example.user.projetinho.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.user.projetinho.R;
+import com.example.user.projetinho.Splash.SplashActivity;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;

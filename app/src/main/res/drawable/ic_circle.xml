@@ -3,8 +3,8 @@
     <item>
         <shape android:shape="oval" >
             <solid android:color="@color/colorCircle"/>
-            <size android:width="160dp"
-                  android:height="160dp"/>
+            <size android:width="130dp"
+                  android:height="130dp"/>
         </shape>
     </item>
 </selector>

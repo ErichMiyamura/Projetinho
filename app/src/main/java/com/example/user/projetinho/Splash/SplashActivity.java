@@ -1,12 +1,13 @@
-package com.example.user.projetinho;
+package com.example.user.projetinho.Splash;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
+
+import com.example.user.projetinho.Login.LoginActivity;
+import com.example.user.projetinho.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
