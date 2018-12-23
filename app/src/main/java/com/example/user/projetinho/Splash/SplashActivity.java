@@ -15,6 +15,7 @@ import java.util.TimerTask;
 public class SplashActivity extends AppCompatActivity {
 
     private ImageView imageViewSplash;
+    private Timer timer = new Timer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
 
-        new Timer().schedule(new TimerTask() {
+        timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 jump();

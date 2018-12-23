@@ -21,7 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".Home.HomeActivity"/>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -46,7 +45,8 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register.RegisterActivity"></activity>
+        <activity android:name=".Register.RegisterActivity" />
+        <activity android:name=".Home.HomeActivity"></activity>
     </application>
 
 </manifest>

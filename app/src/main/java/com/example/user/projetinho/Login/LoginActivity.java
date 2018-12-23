@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 import com.example.user.projetinho.Home.HomeActivity;
 import com.example.user.projetinho.R;
 import com.example.user.projetinho.Register.RegisterActivity;
-import com.example.user.projetinho.Splash.SplashActivity;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -55,13 +53,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        initViews();
 
-        callbackManager = CallbackManager.Factory.create();
-        loginButton.setReadPermissions(Arrays.asList(EMAIL, PUBLIC_PROFILE));
-        firebaseAuth = firebaseAuth.getInstance();
-        btnEntrar = findViewById(R.id.btn_entrar);
-        btnCadastrarSe = findViewById(R.id.btn_cadastrar_se);
+        initViews();
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -117,6 +110,11 @@ public class LoginActivity extends AppCompatActivity {
         textInputEditPassword = findViewById(R.id.textInputEditText_login_senha);
         loginButton = findViewById(R.id.btn_login_facebook_default);
         imageViewProfile = findViewById(R.id.imageview_user_login);
+        callbackManager = CallbackManager.Factory.create();
+        loginButton.setReadPermissions(Arrays.asList(EMAIL, PUBLIC_PROFILE));
+        firebaseAuth = firebaseAuth.getInstance();
+        btnEntrar = findViewById(R.id.btn_entrar);
+        btnCadastrarSe = findViewById(R.id.btn_cadastrar_se);
     }
 
     private void getUserProfile() {
