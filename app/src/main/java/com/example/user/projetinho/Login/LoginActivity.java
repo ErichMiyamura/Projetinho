@@ -4,12 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.user.projetinho.Home.HomeActivity;
 import com.example.user.projetinho.R;
+import com.example.user.projetinho.Register.RegisterActivity;
 import com.example.user.projetinho.Splash.SplashActivity;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -37,12 +42,14 @@ public class LoginActivity extends AppCompatActivity {
     private static final String EMAIL = "email";
     private static final String PUBLIC_PROFILE = "public_profile";
 
-    private TextInputLayout textInputLogin;
-    private TextInputLayout textInputPassword;
+    private TextInputEditText textInputEditLogin;
+    private TextInputEditText textInputEditPassword;
     private CircleImageView imageViewProfile;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
     private FirebaseAuth firebaseAuth;
+    private Button btnEntrar;
+    private Button btnCadastrarSe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +60,8 @@ public class LoginActivity extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
         loginButton.setReadPermissions(Arrays.asList(EMAIL, PUBLIC_PROFILE));
         firebaseAuth = firebaseAuth.getInstance();
+        btnEntrar = findViewById(R.id.btn_entrar);
+        btnCadastrarSe = findViewById(R.id.btn_cadastrar_se);
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -80,6 +89,20 @@ public class LoginActivity extends AppCompatActivity {
             //startActivity(new Intent(LoginActivity.this, MainActivity.class));
             Toast.makeText(this, "Já está logado", Toast.LENGTH_SHORT).show();
         }
+
+        btnEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+            }
+        });
+
+        btnCadastrarSe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            }
+        });
     }
 
 
@@ -90,8 +113,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        textInputLogin = findViewById(R.id.textinput_user_login);
-        textInputPassword = findViewById(R.id.textinput_password_login);
+        textInputEditLogin = findViewById(R.id.textInputEditText_login_email);
+        textInputEditPassword = findViewById(R.id.textInputEditText_login_senha);
         loginButton = findViewById(R.id.btn_login_facebook_default);
         imageViewProfile = findViewById(R.id.imageview_user_login);
     }
@@ -134,7 +157,7 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("LOG", "signInWithCredential:success");
                             FirebaseUser user = firebaseAuth.getCurrentUser();
-                            startActivity(new Intent(LoginActivity.this, SplashActivity.class));
+                            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
